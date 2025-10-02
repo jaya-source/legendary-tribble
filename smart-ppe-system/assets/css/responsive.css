@@ -1,0 +1,575 @@
+/* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+    
+    .problem-grid,
+    .solution-grid {
+        gap: 3rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        text-align: center;
+        transition: var(--transition-normal);
+        box-shadow: 0 10px 27px var(--shadow-dark);
+        padding: 2rem 0;
+        gap: 1.5rem;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Hero Section */
+    .hero-content {
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .stat-item {
+        min-width: 120px;
+    }
+    
+    /* Section Spacing */
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    /* Problem & Solution Grids */
+    .problem-grid,
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .problem-item,
+    .feature-item {
+        padding: 1.5rem;
+    }
+    
+    .stats-card {
+        padding: 2rem;
+    }
+    
+    .stat-number-large {
+        font-size: 3rem;
+    }
+    
+    .mini-stats {
+        gap: 1rem;
+    }
+    
+    /* Mine Gate Simulation */
+    .mine-gate-simulation {
+        min-height: 400px;
+        padding: 1.5rem;
+    }
+    
+    .worker-scan-area {
+        width: 150px;
+        height: 200px;
+    }
+    
+    .worker-silhouette {
+        width: 100px;
+        height: 180px;
+    }
+    
+    .ppe-indicator {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+    }
+    
+    .status-display {
+        min-width: 200px;
+        padding: 1rem;
+    }
+    
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Floating Icons */
+    .float-icon {
+        font-size: 2rem;
+    }
+    
+    .float-icon:nth-child(1) { top: 15%; left: 5%; }
+    .float-icon:nth-child(2) { top: 25%; right: 5%; }
+    .float-icon:nth-child(3) { bottom: 25%; left: 10%; }
+    .float-icon:nth-child(4) { bottom: 15%; right: 10%; }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+        height: 60px;
+    }
+    
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+    
+    .nav-logo i {
+        font-size: 1.5rem;
+    }
+    
+    .nav-menu {
+        top: 60px;
+        padding: 1.5rem 0;
+        gap: 1rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding-top: 60px;
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        padding: 1rem 0;
+    }
+    
+    .hero-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.8rem, 10vw, 2.5rem);
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-actions {
+        margin-bottom: 2rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    /* Sections */
+    section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    /* Problem Items */
+    .problem-item,
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+    
+    .problem-icon,
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin: 0 auto;
+    }
+    
+    .problem-text h3,
+    .feature-content h3 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+    
+    .stats-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-number-large {
+        font-size: 2.5rem;
+    }
+    
+    .mini-stat {
+        padding: 0.75rem;
+    }
+    
+    .mini-stat span {
+        font-size: 1.25rem;
+    }
+    
+    /* Mine Gate Simulation */
+    .mine-gate-simulation {
+        min-height: 300px;
+        padding: 1rem;
+    }
+    
+    .camera {
+        width: 60px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+    
+    .scanning-beam {
+        height: 150px;
+    }
+    
+    .worker-scan-area {
+        width: 120px;
+        height: 160px;
+    }
+    
+    .worker-silhouette {
+        width: 80px;
+        height: 140px;
+    }
+    
+    .ppe-indicator {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+    
+    .status-display {
+        min-width: 150px;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .verification-items {
+        gap: 0.25rem;
+    }
+    
+    .verify-item {
+        padding: 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Feature Cards */
+    .feature-card {
+        padding: 1.25rem;
+    }
+    
+    .feature-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-highlight {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+    }
+    
+    /* Feature Tags */
+    .feature-tags {
+        justify-content: center;
+    }
+    
+    .tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    /* Floating Icons - Reduce for mobile */
+    .float-icon {
+        font-size: 1.5rem;
+        opacity: 0.5;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .problem-item,
+    .feature-item,
+    .feature-card {
+        padding: 1rem;
+    }
+    
+    .mine-gate-simulation {
+        padding: 0.75rem;
+    }
+}
+
+/* High-DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Enhance crisp rendering on high-DPI screens */
+    .nav-logo,
+    .hero-title,
+    .section-title {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Slightly thicker borders for better visibility */
+    .feature-card,
+    .problem-item,
+    .stats-card {
+        border-width: 1.5px;
+    }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        padding: 0.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-actions {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    .navbar,
+    .floating-icons,
+    .hero-background,
+    .nav-toggle {
+        display: none !important;
+    }
+    
+    .hero {
+        padding-top: 0;
+        min-height: auto;
+    }
+    
+    .section-title,
+    .hero-title {
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+    }
+    
+    .btn {
+        border: 2px solid black !important;
+        color: black !important;
+        background: white !important;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating-icons {
+        display: none;
+    }
+    
+    .scanning-beam {
+        animation: none;
+        opacity: 0.5;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #FFFF00;
+        --secondary-color: #00FF00;
+        --accent-color: #FF0000;
+        --text-primary: #FFFFFF;
+        --text-secondary: #CCCCCC;
+        --border-color: #666666;
+    }
+    
+    .feature-card,
+    .problem-item,
+    .stats-card {
+        border-width: 2px;
+    }
+}

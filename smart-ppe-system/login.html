@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SmartPPE Safety Management System</title>
+    <meta name="description" content="Secure login to SmartPPE dashboard for PPE compliance monitoring and safety management.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body class="login-body">
+    <!-- Background Animation -->
+    <div class="login-background">
+        <div class="floating-ppe-icons">
+            <div class="ppe-float" style="--delay: 0s; --x: 10%; --y: 20%;">
+                <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="ppe-float" style="--delay: 1s; --x: 80%; --y: 15%;">
+                <i class="fas fa-eye-slash"></i>
+            </div>
+            <div class="ppe-float" style="--delay: 2s; --x: 20%; --y: 70%;">
+                <i class="fas fa-vest"></i>
+            </div>
+            <div class="ppe-float" style="--delay: 3s; --x: 90%; --y: 80%;">
+                <i class="fas fa-hiking"></i>
+            </div>
+            <div class="ppe-float" style="--delay: 4s; --x: 60%; --y: 40%;">
+                <i class="fas fa-satellite-dish"></i>
+            </div>
+            <div class="ppe-float" style="--delay: 5s; --x: 15%; --y: 50%;">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <!-- Login Card -->
+        <div class="login-card">
+            <!-- Logo Section -->
+            <div class="login-header">
+                <div class="login-logo">
+                    <i class="fas fa-hard-hat"></i>
+                    <span>SmartPPE</span>
+                </div>
+                <h1>Welcome Back</h1>
+                <p>Sign in to your safety management dashboard</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="login-form" id="loginForm">
+                <!-- Error/Success Messages -->
+                <div class="login-message" id="loginMessage"></div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email Address
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                    >
+                    <span class="form-error" id="emailError"></span>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <div class="password-input-container">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required 
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                        >
+                        <button type="button" class="password-toggle" id="passwordToggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="form-error" id="passwordError"></span>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn" id="loginBtn">
+                    <span class="btn-text">Sign In</span>
+                    <div class="btn-loader">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </button>
+
+                <!-- Alternative Login Methods -->
+                <div class="login-divider">
+                    <span>or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button type="button" class="social-btn microsoft-btn">
+                        <i class="fab fa-microsoft"></i>
+                        Microsoft
+                    </button>
+                </div>
+            </form>
+
+            <!-- Footer -->
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#" class="signup-link">Request Access</a></p>
+                <div class="login-links">
+                    <a href="index.html">← Back to Website</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information Panel -->
+        <div class="info-panel">
+            <div class="info-content">
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Enterprise Security</span>
+                </div>
+
+                <h2>Secure Access to Your Safety Dashboard</h2>
+                <p>Monitor PPE compliance, track safety metrics, and manage your workforce safety with our advanced AI-powered system.</p>
+
+                <div class="feature-highlights">
+                    <div class="feature-highlight">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h3>Real-time Analytics</h3>
+                            <p>Live compliance monitoring and instant alerts</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Worker Management</h3>
+                            <p>Track individual compliance and safety records</p>
+                        </div>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3>Mobile Access</h3>
+                            <p>Access your dashboard from anywhere, anytime</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-showcase">
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">256-bit</span>
+                        <span class="stat-label">Encryption</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Users Panel (for demonstration purposes) -->
+    <div class="demo-users-panel">
+        <div class="demo-header">
+            <h3>Demo Login Credentials</h3>
+            <p>Try different user roles:</p>
+        </div>
+        <div class="demo-users">
+            <div class="demo-user" data-email="admin@smartppe.com" data-password="admin123">
+                <div class="user-role">System Admin</div>
+                <div class="user-email">admin@smartppe.com</div>
+                <div class="user-access">Full system access</div>
+            </div>
+            <div class="demo-user" data-email="safety@miningcorp.com" data-password="safety123">
+                <div class="user-role">Safety Manager</div>
+                <div class="user-email">safety@miningcorp.com</div>
+                <div class="user-access">Safety oversight & reports</div>
+            </div>
+            <div class="demo-user" data-email="supervisor@coalmine.com" data-password="super123">
+                <div class="user-role">Supervisor</div>
+                <div class="user-email">supervisor@coalmine.com</div>
+                <div class="user-access">Team monitoring</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
